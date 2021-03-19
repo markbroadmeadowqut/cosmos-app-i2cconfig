@@ -1,0 +1,1 @@
+# cosmos-app-i2cconfig
