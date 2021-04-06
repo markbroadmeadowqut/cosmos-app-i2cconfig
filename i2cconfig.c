@@ -101,6 +101,7 @@ int main() {
 		return fd;	
 	}
 
+	/*
 	//Set slave address for clock generator
 	result = ioctl(fd, I2C_SLAVE, ADDR_CLKGEN);
 	if (result < 0) {
@@ -108,7 +109,6 @@ int main() {
 		return result;	
 	}
 	
-	/*
 	//Configure Si5338 clock generator
 	i2c_reg_rmw(fd, 230, 0x10, 0x10);	// SBR, bit 4
  	i2c_reg_rmw(fd, 241, 0x80, 0x80);	// SBR, bit 7

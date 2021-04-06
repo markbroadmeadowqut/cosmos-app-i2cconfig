@@ -1,4 +1,4 @@
-APP = cosmos-i2cconfig
+APP = i2cconfig
 CC = gcc	
 
 $(APP): $(APP).c
