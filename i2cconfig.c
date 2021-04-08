@@ -5,8 +5,8 @@
 #include <sys/ioctl.h>
 #include <linux/i2c-dev.h>
 
-//#include "si5338-registers.h"
-//#define ADDR_CLKGEN 	0x70
+#include "si5338-registers.h"
+#define ADDR_CLKGEN 	0x70
 
 #define DEV_I2C_MUX0 "/dev/i2c-1"
 #define DEV_I2C_MUX1 "/dev/i2c-2"
@@ -101,7 +101,6 @@ int main() {
 		return fd;	
 	}
 
-	/*
 	//Set slave address for clock generator
 	result = ioctl(fd, I2C_SLAVE, ADDR_CLKGEN);
 	if (result < 0) {
@@ -142,7 +141,6 @@ int main() {
 	i2c_reg_write(fd, 45, reg);
 	i2c_reg_rmw(fd, 49, 0x80, 0x80);	// SBR, bit 7
 	i2c_reg_rmw(fd, 230, 0xEF, 0x10);	// CBR, bit 4
-	*/
 	
 	//Set slave address for MGT Mux 2
 	result = ioctl(fd, I2C_SLAVE, ADDR_MGTMUX2);
