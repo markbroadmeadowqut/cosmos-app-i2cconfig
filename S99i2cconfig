@@ -1,13 +1,13 @@
 #!/bin/sh
-DAEMON=/usr/bin/cosmos-i2cconfig
+DAEMON=/usr/bin/i2cconfig
 start ()
 {
-	echo " Executing cosmos-i2cconfig..."
+	echo " Executing i2cconfig..."
 	start-stop-daemon -S -o -x $DAEMON
 }
 stop ()
 {
-	echo " Stopping cosmos-i2cconfig..."
+	echo " Stopping i2cconfig..."
 	start-stop-daemon -K -x $DAEMON
 }
 restart()
